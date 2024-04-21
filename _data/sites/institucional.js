@@ -1,5 +1,5 @@
 module.exports={
-  name: "Bernoulli Institucional", // optional, falls back to object key
+  // name: "Bernoulli Institucional", // optional, falls back to object key
   description: "Bernoulli Institucional",
   // skip if localhost
   // skip if this is a new fork of the speedlify (not Zach’s)
