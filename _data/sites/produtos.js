@@ -15,5 +15,7 @@ module.exports={
   urls: [
     "https://mb4.bernoulli.com.br/",
     "https://meu.bernoulli.com.br/xp/3.5.2/index.html",
+    "https://diveb.bernoulli.com.br/",
+    "https://play.bernoulli.com.br/",
   ]
 };
