@@ -1,5 +1,5 @@
 module.exports={
-  name: "Produtos Concorrentes", // optional, falls back to object key
+  // name: "Produtos Concorrentes", // optional, falls back to object key
   description: "Produtos Concorrentes",
   // skip if localhost
   // skip if this is a new fork of the speedlify (not Zach’s)
@@ -17,12 +17,12 @@ module.exports={
     "https://www.plurall.net/",
     "https://one.geekie.com.br/",
     "https://cloeapp.com/",
-    "https://pmais.p4ed.com/",
+    // "https://pmais.p4ed.com/",
     "https://portalsaseducacao.com.br/",
     "https://positivoon.com.br/",
     "https://app.souionica.com.br/",
     "https://ava.sae.digital/",
-    "https://compartir.stn-neds.com/",
+    // "https://compartir.stn-neds.com/",
     "https://identity.santillanaconnect.com/",
   ]
 };
