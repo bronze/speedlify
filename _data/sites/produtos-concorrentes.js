@@ -17,12 +17,12 @@ module.exports={
     "https://www.plurall.net/",
     "https://one.geekie.com.br/",
     "https://cloeapp.com/",
-    // "https://pmais.p4ed.com/",
-    // "https://portalsaseducacao.com.br/",
+    // "https://pmais.p4ed.com/", redirect to bug ass url
+    // "https://portalsaseducacao.com.br/", 2 redirects
     "https://positivoon.com.br/",
     "https://app.souionica.com.br/",
     "https://ava.sae.digital/",
-    // "https://compartir.stn-neds.com/",
+    // "https://compartir.stn-neds.com/", redirect to santilla
     "https://identity.santillanaconnect.com/",
   ]
 };
