@@ -15,7 +15,7 @@ module.exports={
   urls: [
     "https://www.plurall.net/",
     "https://one.geekie.com.br/",
-    "https://cloeedu.com.br/",
+    "https://cloeapp.com/",
     "https://pmais.p4ed.com/",
     "https://portalsaseducacao.com.br/",
     "https://positivoon.com.br/",

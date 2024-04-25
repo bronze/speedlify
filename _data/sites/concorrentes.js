@@ -17,6 +17,7 @@ module.exports={
   urls: [
     "https://somoseducacao.com.br/",
     "https://www.geekie.com.br/",
+    "https://cloeedu.com.br/",
     "https://www.sistemapoliedro.com.br/",
     "https://saseducacao.com.br/",
     "https://www.sistemapositivo.com.br/",
@@ -25,6 +26,5 @@ module.exports={
     "https://www.moderna.com.br/",
     "https://sistemafb.com.br/",
     "https://www.santillana.com.br/",
-
   ]
 };
