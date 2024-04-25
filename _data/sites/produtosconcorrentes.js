@@ -1,4 +1,5 @@
 module.exports={
+  name: "Produtos Concorrentes", // optional, falls back to object key
   description: "Produtos Concorrentes",
   // skip if localhost
   // skip if this is a new fork of the speedlify (not Zach’s)
