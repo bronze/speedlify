@@ -21,7 +21,7 @@ module.exports={
     "https://positivoon.com.br/",
     "https://app.souionica.com.br/",
     "https://ava.sae.digital/",
-    "https://www.modernacompartilha.com.br/",
+    "https://compartir.stn-neds.com/",
     "https://identity.santillanaconnect.com/",
   ]
 };
