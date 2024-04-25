@@ -18,7 +18,7 @@ module.exports={
     "https://one.geekie.com.br/",
     "https://cloeapp.com/",
     // "https://pmais.p4ed.com/",
-    "https://portalsaseducacao.com.br/",
+    // "https://portalsaseducacao.com.br/",
     "https://positivoon.com.br/",
     "https://app.souionica.com.br/",
     "https://ava.sae.digital/",
