@@ -14,7 +14,7 @@ module.exports={
     freshChrome: "run",
   },
   urls: [
-    "https://www.plurall.net/",
+    "https://login.plurall.net/",
     "https://one.geekie.com.br/",
     "https://cloeapp.com/",
     "https://app.souionica.com.br/",
