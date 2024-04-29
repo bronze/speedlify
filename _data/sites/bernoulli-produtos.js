@@ -1,5 +1,6 @@
 module.exports={
-  description: "Produtos Bernoulli",
+  name: "Bernoulli Produtos", // optional, falls back to object key
+  description: "Bernoulli Produtos",
   // skip if localhost
   // skip if this is a new fork of the speedlify (not Zach’s)
   // skip: !process.env.CONTEXT||process.env.SITE_NAME!=="speedlify",
