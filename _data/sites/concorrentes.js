@@ -38,5 +38,11 @@ module.exports={
     // "https://ampliaplataforma.com.br/",
     // "https://www.sistemadeensinoph.com.br/",
     // "https://www.mackenzie.br/",
+    // "https://www.audeeducacao.com.br/",
+    // "https://www.redecristadeeducacao.com.br/",
+    // "https://ensinoelite.com.br/",
+    // "https://gruposaltaedu.com/",
+    // "https://raizeducacao.com.br/",
+    // "https://www.sistemadeensinosucesso.com.br/",
   ]
 };

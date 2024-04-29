@@ -31,5 +31,8 @@ module.exports={
     // "https://aluno.sistemaetapa.com.br/",
     // "https://portaisetapa.b2clogin.com/portaisetapa.onmicrosoft.com/B2C_1_SignUpSignInAluno/oauth2/v2.0/authorize?client_id=5756c6a4-d537-47e6-bf13-585e3f43454d&response_type=code&redirect_uri=https://aluno.sistemaetapa.com.br&response_mode=query&scope=openid%20offline_access",
     "https://sso.lex.education/",
+    // "https://portal.audeeducacao.com.br/",
+    // "https://portalrm.raizeducacao.com.br/FrameHTML/Web/App/Edu/PortalEducacional/login/",
+    // "https://www.sistemadeensinosucesso.com.br/area-aluno.php",
   ]
 };
