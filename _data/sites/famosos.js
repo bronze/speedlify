@@ -21,5 +21,6 @@ module.exports={
     "https://picpay.com/",
     "https://www.itau.com.br/",
     "https://www.boticario.com.br/",
+    "https://www.rappi.com.br/",
   ]
 };
