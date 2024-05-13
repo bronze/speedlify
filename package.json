@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "chartist": "^0.11.4",
+    "posthog-js": "^1.131.4",
     "speedlify-score": "^4.0.1"
   }
 }
