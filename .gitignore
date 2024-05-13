@@ -8,3 +8,4 @@ package-lock.json
 .cache
 # Local Netlify folder
 .netlify
+netlify.toml
