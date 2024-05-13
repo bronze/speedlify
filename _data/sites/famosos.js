@@ -17,7 +17,7 @@ module.exports={
   urls: [
     "https://www.ifood.com.br/",
     "https://nubank.com.br/",
-    "https://gympass.com/pt-br/",
+    "https://wellhub.com/pt-br/",
     "https://picpay.com/",
     "https://www.itau.com.br/",
     "https://www.boticario.com.br/",
