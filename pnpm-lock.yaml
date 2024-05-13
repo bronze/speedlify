@@ -8,9 +8,6 @@ dependencies:
   chartist:
     specifier: ^0.11.4
     version: 0.11.4
-  posthog-js:
-    specifier: ^1.131.4
-    version: 1.131.4
   speedlify-score:
     specifier: ^4.0.1
     version: 4.0.4
@@ -1114,10 +1111,6 @@ packages:
       pend: 1.2.0
     dev: true
 
-  /fflate@0.4.8:
-    resolution: {integrity: sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==}
-    dev: false
-
   /filelist@1.0.4:
     resolution: {integrity: sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q==}
     dependencies:
@@ -2060,13 +2053,6 @@ packages:
       semver-compare: 1.0.0
     dev: true
 
-  /posthog-js@1.131.4:
-    resolution: {integrity: sha512-pKa1p6Q9jRU6s+xSluqGifODMncWTXRaeQw7yVet5U+0U56P0srdMO8NpzllIgDjYL9WLgUjDInucOBw5Cl/tA==}
-    dependencies:
-      fflate: 0.4.8
-      preact: 10.21.0
-    dev: false
-
   /posthtml-parser@0.11.0:
     resolution: {integrity: sha512-QecJtfLekJbWVo/dMAA+OSwY79wpRmbqS5TeXvXSX+f0c6pW4/SE6inzZ2qkU7oAMCPqIDkZDvd/bQsSFUnKyw==}
     engines: {node: '>=12'}
@@ -2098,10 +2084,6 @@ packages:
       posthtml-parser: 0.11.0
       posthtml-render: 3.0.0
     dev: true
-
-  /preact@10.21.0:
-    resolution: {integrity: sha512-aQAIxtzWEwH8ou+OovWVSVNlFImL7xUCwJX3YMqA3U8iKCNC34999fFOnWjYNsylgfPgMexpbk7WYOLtKr/mxg==}
-    dev: false
 
   /progress@2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}

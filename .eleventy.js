@@ -5,10 +5,6 @@ const getObjectKey=require("./utils/getObjectKey.js");
 const calc=require("./utils/calc.js");
 const Sparkline=require('./utils/sparkline.js');
 
-import posthog from 'posthog-js'
-
-posthog.init('phc_VCuJpAheKD2pjqzI9q6T8I8nfHoiSgQxwLsw56jZiIv', {api_host: 'https://us.i.posthog.com'})
-
 function hasUrl(urls, requestedUrl) {
   // urls comes from sites[vertical].urls, all requestedUrls (may not include trailing slash)
 
