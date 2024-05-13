@@ -24,4 +24,3 @@ package = "./plugins/keep-data-cache"
 
 [context.production.environment]
   PUPPETEER_CACHE_DIR = "/opt/build/repo/node_modules/.cache/puppeteer-bin/"
-  PENDO_KEY = "87c9b7d6-be41-4b7f-5cde-3f452463a714"
