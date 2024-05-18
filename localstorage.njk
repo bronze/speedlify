@@ -1,0 +1,8 @@
+---
+layout: layout.njk
+---
+  <div x-data="localstorageToggle()">
+    <div id="plausible_yes" x-show="exclusionState" class="hidden">You are currently excluding visits.</div>
+    <div id="plausible_not" x-show="!exclusionState" class="hidden">You are not excluding visits.</div>
+    <button id="plausible_button" @click="toggleExclusion">Toggle!!: <span x-text="buttonLabel"></span> - </button>
+  </div>

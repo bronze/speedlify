@@ -79,7 +79,7 @@
       f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){return g._w[s].apply(this,arguments)}),g._v="2.0.0")
       }(window,document,window._fs_namespace,"script",window._fs_script);
     </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 	</head>
 	<body>
@@ -110,5 +110,57 @@
 
 		<script defer src="{{ '/chartist.js' | url }}"></script>
 		<script defer src="{{ '/script.js' | url }}"></script>
+
+    <script>
+      function localstorageToggle() {
+        return {
+          exclusionState: localStorage.getItem('visitor_identifier')==='true',
+          get buttonLabel() {
+            return this.exclusionState? 'Stop excluding my visits':'Exclude my visits';
+          },
+          toggleExclusion() {
+            this.exclusionState=!this.exclusionState;
+            if (this.exclusionState) {
+              localStorage.removeItem('user_id');
+            } else {
+              localStorage.setItem('user_id', '1337');
+            }
+            this.sendVisitorId();
+          },
+          sendVisitorId() {
+            const personalId=localStorage.getItem('user_id'); // Replace 'user_id' with your actual key
+            if (personalId) {
+              console.log('Sending personal ID to Pendo and PostHog:', personalId);
+
+              // Send to Pendo
+              if (window.pendo) {
+                window.pendo.identify({
+                  visitor: {
+                    id: personalId
+                    // Add other visitor details here as needed
+                  }
+                });
+              } else {
+                console.warn('Pendo is not loaded.');
+              }
+
+              // Send to PostHog
+              if (window.posthog) {
+                window.posthog.identify(personalId, {
+                  // Add other user properties here if needed
+                });
+              } else {
+                console.warn('PostHog is not loaded.');
+              }
+            } else {
+              console.log('No Personal ID found in localStorage.');
+            }
+          },
+          init() {
+            this.sendVisitorId(); // Send visitor ID on initialization if it exists
+          }
+        };
+      }
+    </script>
 	</body>
 </html>
