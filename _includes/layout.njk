@@ -164,9 +164,11 @@
 
                       // Send to FullStory
                       if (window.FS) {
-                          window.FS.identify(personalId, {
+                         FS('setIdentity', {
+                            uid: personalId,
+                            properties: {
                               displayName: 'User ' + personalId,
-                              // Add other user properties here if needed
+                            }
                           });
                       } else {
                           console.warn('FullStory is not loaded.');
@@ -174,8 +176,8 @@
 
                       // Send to Heap
                       if (window.heap) {
-                          window.heap.identify(personalId);
-                          window.heap.addUserProperties({
+                          heap.identify(personalId);
+                          heap.addUserProperties({
                               // Add other user properties here if needed
                           });
                       } else {
