@@ -122,54 +122,75 @@
 
     <script>
       function localstorageToggle() {
-        return {
-          exclusionState: localStorage.getItem('visitor_identifier')==='true',
-          get buttonLabel() {
-            return this.exclusionState? 'Stop excluding my visits':'Exclude my visits';
-          },
-          toggleExclusion() {
-            this.exclusionState=!this.exclusionState;
-            if (this.exclusionState) {
-              localStorage.removeItem('user_id');
-            } else {
-              localStorage.setItem('user_id', '1337');
-            }
-            this.sendVisitorId();
-          },
-          sendVisitorId() {
-            const personalId=localStorage.getItem('user_id'); // Replace 'user_id' with your actual key
-            if (personalId) {
-              console.log('Sending personal ID to Pendo and PostHog:', personalId);
-
-              // Send to Pendo
-              if (window.pendo) {
-                window.pendo.identify({
-                  visitor: {
-                    id: personalId
-                    // Add other visitor details here as needed
+          return {
+              exclusionState: localStorage.getItem('visitor_identifier') === 'true',
+              get buttonLabel() {
+                  return this.exclusionState ? 'Stop excluding my visits' : 'Exclude my visits';
+              },
+              toggleExclusion() {
+                  this.exclusionState = !this.exclusionState;
+                  if (this.exclusionState) {
+                      localStorage.removeItem('user_id');
+                  } else {
+                      localStorage.setItem('user_id', '1337');
                   }
-                });
-              } else {
-                console.warn('Pendo is not loaded.');
-              }
+                  this.sendVisitorId();
+              },
+              sendVisitorId() {
+                  const personalId = localStorage.getItem('user_id'); // Replace 'user_id' with your actual key
+                  if (personalId) {
+                      console.log('Sending personal ID to Pendo, PostHog, FullStory, and Heap:', personalId);
 
-              // Send to PostHog
-              if (window.posthog) {
-                window.posthog.identify(personalId, {
-                  // Add other user properties here if needed
-                });
-              } else {
-                console.warn('PostHog is not loaded.');
+                      // Send to Pendo
+                      if (window.pendo) {
+                          window.pendo.identify({
+                              visitor: {
+                                  id: personalId
+                                  // Add other visitor details here as needed
+                              }
+                          });
+                      } else {
+                          console.warn('Pendo is not loaded.');
+                      }
+
+                      // Send to PostHog
+                      if (window.posthog) {
+                          window.posthog.identify(personalId, {
+                              // Add other user properties here if needed
+                          });
+                      } else {
+                          console.warn('PostHog is not loaded.');
+                      }
+
+                      // Send to FullStory
+                      if (window.FS) {
+                          window.FS.identify(personalId, {
+                              displayName: 'User ' + personalId,
+                              // Add other user properties here if needed
+                          });
+                      } else {
+                          console.warn('FullStory is not loaded.');
+                      }
+
+                      // Send to Heap
+                      if (window.heap) {
+                          window.heap.identify(personalId);
+                          window.heap.addUserProperties({
+                              // Add other user properties here if needed
+                          });
+                      } else {
+                          console.warn('Heap is not loaded.');
+                      }
+                  } else {
+                      console.log('No Personal ID found in localStorage.');
+                  }
+              },
+              init() {
+                  this.sendVisitorId(); // Send visitor ID on initialization if it exists
               }
-            } else {
-              console.log('No Personal ID found in localStorage.');
-            }
-          },
-          init() {
-            this.sendVisitorId(); // Send visitor ID on initialization if it exists
-          }
-        };
+          };
       }
+
     </script>
 	</body>
 </html>
