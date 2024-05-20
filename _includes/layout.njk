@@ -187,8 +187,8 @@
 
                       // Send to Amplitude
                       if (window.amplitude) {
-                          amplitude.getInstance().setUserId(personalId);
-                          amplitude.getInstance().identify(new amplitude.Identify().set('user_id', personalId));
+                          amplitude.setUserId(personalId);
+                          //amplitude.identify(new amplitude.Identify().set('user_id', personalId));
                       } else {
                           console.warn('Amplitude is not loaded.');
                       }
