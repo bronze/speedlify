@@ -132,8 +132,10 @@
                   this.exclusionState = !this.exclusionState;
                   if (this.exclusionState) {
                       localStorage.removeItem('user_id');
+                      localStorage.removeItem('visitor_identifier');
                   } else {
                       localStorage.setItem('user_id', '1337');
+                      localStorage.setItem('visitor_identifier', 'true');
                   }
                   this.sendVisitorId();
               },
